@@ -1,5 +1,5 @@
-bag = []                            
-bag1 = []                           
+bag = []
+bag1 = []
 score = 0
 cells = 0
 seek = 'астма'
@@ -48,14 +48,17 @@ for i, j, k in zip(things, ratio, range(12 - g)):
         score -= things[ratio[k][1]][1]
         cells -= things[ratio[k][1]][0]
 
-cells = 0
-score = 0
 for i in bag0:
     bag1.append(i[1])
+
 things['и'] = (1, 5)
+
+score = 0
+cells = 0
 for i in bag1:
     cells += things[i][0]
     score += things[i][1]
+
 for i in bag1:
     for g in range(things[i][0]):
         bag.append([i])
@@ -67,4 +70,5 @@ for i in range(9):
     else:
         print(bag[i], ', ', end='', sep='')
 score = score - (maxscore - score)
-print('Итоговые очки выживания:', score + 15) # 15 - начальное количество очков по условию
+# 15 - начальное количество очков по условию
+print('Итоговые очки выживания:', score + 15)
